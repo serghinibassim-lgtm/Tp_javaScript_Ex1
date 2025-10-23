@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tp_JavaScript_Ex1 </title>
+  <link rel="stylesheet" href="style.css">
+
+  
+</head>
+
+<body>
+  <div> <h1 style="color: chartreuse;">Tp_JavaScript_Ex1</h1></div>
+  <h2 style="color: blue;">Questions a choix simple</h2>
+
+  <div class="container">
+    <form>
+      <h3>Vous devez choisir la capitale de la France :</h3>
+
+      <div>
+        <input id="montpellier" type="radio" name="capital" value="montpellier" required>
+        <label for="montpellier">Montpellier</label>
+      </div>
+
+      <div>
+        <input id="paris" type="radio" name="capital" value="paris">
+        <label for="paris">Paris</label>
+      </div>
+       <div>
+        <input id="lile" type="radio" name="capital" value="lile">
+        <label for="lile">Lile</label>
+      </div>
+
+    
+    </form>
+
+    <form>
+      <h3>Vous devez choisir le systeme d’exploitation open source :</h3>
+
+      <div>
+        <input id="windows" type="radio" name="os" value="windows" required>
+        <label for="windows">Windows</label>
+      </div>
+
+      <div>
+        <input id="apple" type="radio" name="os" value="apple">
+        <label for="apple">Apple</label>
+      </div>
+
+      <div>
+        <input id="linux" type="radio" name="os" value="linux">
+        <label for="linux">Linux</label>
+      </div>
+    </form>
+  </div>
+
+  <h2 style="color:blue">Questions a choix multiple</h2>
+
+  <div class="container">
+    <form>
+      <h3>Choisissez les pays d’Afrique :</h3>
+
+      <div>
+        <input id="allemagne" type="checkbox" name="afrique" value="allemagne">
+        <label for="allemagne">Allemagne</label>
+      </div>
+
+      <div>
+        <input id="maroc" type="checkbox" name="afrique" value="maroc">
+        <label for="maroc">Maroc</label>
+      </div>
+
+      <div>
+        <input id="mali" type="checkbox" name="afrique" value="mali">
+        <label for="mali">Mali</label>
+      </div>
+    </form>
+
+    <form>
+      <h3>Choisissez les langages compiles :</h3>
+
+      <div>
+        <input id="html" type="checkbox" name="compile" value="html">
+        <label for="html">HTML</label>
+      </div>
+
+      <div>
+        <input id="assembly" type="checkbox" name="compile" value="assembly">
+        <label for="assembly">Assembly</label>
+      </div>
+
+      <div>
+        <input id="c" type="checkbox" name="compile" value="c">
+        <label for="c">C</label>
+      </div>
+    </form>
+
+    <form>
+    <h3>Choisissez les langages interprétés :</h3>
+
+<div>
+  <input id="python" type="checkbox" name="interprete" value="python">
+  <label for="python">Python</label>
+</div>
+
+<div>
+  <input id="javascript" type="checkbox" name="interprete" value="javascript">
+  <label for="javascript">JavaScript</label>
+</div>
+
+<div>
+  <input id="ruby" type="checkbox" name="interprete" value="ruby">
+  <label for="ruby">Ruby</label>
+</div>
+
+      
+    </form>
+
+    
+  </div>
+
+   <div>
+      <button class="renisialisbutton" type="button" onclick="initialiser()">Reinitialiser</button>
+      <button class="resultatbutton" type="button" onclick="corriger()"> Afficher resultat</button>
+      <button class="corigirbutton" type="button" onclick="afficherCorrige()"> Afficher corrige</button>
+    </div>
+
+ 
+
+  <script src="script.js"></script>
+</body>
+
+</html>

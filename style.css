@@ -1,0 +1,104 @@
+  
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      margin: 15px;
+      width: 45%;
+      
+    }
+    form:hover{
+       box-shadow: 0 0 20px rgba(26, 220, 12, 0.995);
+       transform: scale(1.1);
+    }
+
+    label {
+      margin-left: 5px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    button,
+    input[type="button"] {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button a {
+      text-decoration: none;
+      color: white;
+    }
+/* زر إعادة التهيئة */
+.renisialisbutton {
+    background-color: #f39c12; /* برتقالي */
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+.renisialisbutton:hover {
+    background-color: #e67e22;
+}
+
+.resultatbutton {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+.resultatbutton:hover {
+    background-color: #2ecc71;
+}
+
+.corigirbutton {
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.corigirbutton:hover {
+    background-color: #3498db;
+}
+
+
+button {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+
