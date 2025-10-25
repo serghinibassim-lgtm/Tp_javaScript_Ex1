@@ -47,9 +47,9 @@
       text-decoration: none;
       color: white;
     }
-/* زر إعادة التهيئة */
+
 .renisialisbutton {
-    background-color: #f39c12; /* برتقالي */
+    background-color: #f39c12; 
     color: white;
     border: none;
     padding: 10px 25px;
