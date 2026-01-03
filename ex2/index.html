@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Email check</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 300px;
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        p {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h3>Email validation</h3>
+        <input type="text" id="email" placeholder="Enter email">
+        <button onclick="verifierEmail()">Check</button>
+        <p id="resultat"></p>
+    </div>
+
+    <script>
+        function verifierEmail() {
+            let email = document.getElementById("email").value;
+            let resultat = document.getElementById("resultat");
+            let reg = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]+$/;
+
+            if (reg.test(email)) {
+                resultat.innerHTML = "Email valid";
+                resultat.style.color = "green";
+            } else {
+                resultat.innerHTML = "Email not valid";
+                resultat.style.color = "red";
+            }
+        }
+    </script>
+
+</body>
+</html>

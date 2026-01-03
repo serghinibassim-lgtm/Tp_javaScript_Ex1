@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Somme de trois temps</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        label {
+            display: inline-block;
+            width: 130px;
+            font-weight: bold;
+        }
+        .ligne {
+            margin-bottom: 10px;
+        }
+        input[type="number"] {
+            width: 60px;
+            padding: 4px;
+            margin: 0 5px 0 2px;
+        }
+        .total-ligne input[type="number"] {
+            width: 50px;
+            margin-left: 10px;
+        }
+        button {
+            margin-top: 15px;
+            margin-right: 10px;
+            padding: 6px 14px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="formTemps" onsubmit="return false;">
+        <div class="ligne">
+            <label>Entrer le premier temps :</label>
+            Heure(s) <input type="number" id="h1" min="0" value="0" />
+            Minute(s) <input type="number" id="m1" min="0" value="0" />
+            Seconde(s) <input type="number" id="s1" min="0" value="0" />
+        </div>
+
+        <div class="ligne">
+            <label>Entrer le deuxieme temps :</label>
+            Heure(s) <input type="number" id="h2" min="0" value="0" />
+            Minute(s) <input type="number" id="m2" min="0" value="0" />
+            Seconde(s) <input type="number" id="s2" min="0" value="0" />
+        </div>
+
+        <div class="ligne">
+            <label>Entrer le troisieme temps :</label>
+            Heure(s) <input type="number" id="h3" min="0" value="0" />
+            Minute(s) <input type="number" id="m3" min="0" value="0" />
+            Seconde(s) <input type="number" id="s3" min="0" value="0" />
+        </div>
+
+        <div class="ligne total-ligne">
+            <label>Total des trois temps :</label>
+            Jour(s) <input type="number" id="jours" readonly />
+            Heure(s) <input type="number" id="heures" readonly />
+            Minute(s) <input type="number" id="minutes" readonly />
+            Seconde(s) <input type="number" id="secondes" readonly />
+        </div>
+
+        <button onclick="calculerTemps()">Somme</button>
+        <button onclick="effacer()">Effacer</button>
+    </form>
+
+    <script>
+        function calculerTemps() {
+            let h1 = Number(document.getElementById("h1").value);
+            let m1 = Number(document.getElementById("m1").value);
+            let s1 = Number(document.getElementById("s1").value);
+
+            let h2 = Number(document.getElementById("h2").value);
+            let m2 = Number(document.getElementById("m2").value);
+            let s2 = Number(document.getElementById("s2").value);
+
+            let h3 = Number(document.getElementById("h3").value);
+            let m3 = Number(document.getElementById("m3").value);
+            let s3 = Number(document.getElementById("s3").value);
+
+            // Calcul total en secondes
+            let totalSecondes = s1 + s2 + s3;
+            let totalMinutes = m1 + m2 + m3 + Math.floor(totalSecondes / 60);
+            totalSecondes = totalSecondes % 60;
+            let totalHeures = h1 + h2 + h3 + Math.floor(totalMinutes / 60);
+            totalMinutes = totalMinutes % 60;
+            let totalJours = Math.floor(totalHeures / 24);
+            totalHeures = totalHeures % 24;
+
+    
+            document.getElementById("jours").value = totalJours;
+            document.getElementById("heures").value = totalHeures;
+            document.getElementById("minutes").value = totalMinutes;
+            document.getElementById("secondes").value = totalSecondes;
+        }
+
+        function effacer() {
+            let ids = ["h1","m1","s1","h2","m2","s2","h3","m3","s3","jours","heures","minutes","secondes"];
+            ids.forEach(id => document.getElementById(id).value = "");
+        }
+    </script>
+
+</body>
+</html>
